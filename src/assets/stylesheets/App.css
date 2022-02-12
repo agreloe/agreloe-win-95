@@ -1,0 +1,202 @@
+.App {
+  text-align: center;
+  font-size: 90%;
+  /*
+  color: canvastext;
+  in light mode: canvas --> white / canvastext --> black
+  in dark mode: canvas --> black / canvastext --> white
+  */
+  /* font-family: "windows_command_prompt"; 
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Archivo', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  */
+  font-family: 'Anonymous Pro', monospace;
+  color: var(--shadow);
+  background-color: var(--main-color);
+  min-height: 100vh;
+  display: flex;
+  overflow-y: hidden;
+}
+
+.folder-container {
+  position: absolute;
+  top: 2.5%;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.folder-container i {
+  width: var(--folder-size);
+  height: var(--folder-size);
+  background-image: url(../icons/message_file-0.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  justify-self: center;
+  margin: 0px 0px .5rem 0px;
+}
+
+.folder-container span {
+  width: calc(var(--folder-size) + 4rem);
+  height: auto;
+  margin: 0;
+  color: var(--light);
+}
+
+.menu-position {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: calc(var(--navbar-size) + .1rem);
+}
+
+.navbar-position {
+  position: absolute;
+  width: 100%;
+  align-self: end;
+}
+
+.react-draggable.react-draggable-dragged.front {
+  z-index: 10;
+}
+
+.window {
+  position: absolute;
+  background-color: var(--interface-color);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+}
+
+.top-bar {
+  background-color: var(--hover-color);
+  width: calc(100% - 2px);
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--light);
+}
+
+.top-bar i {
+  position: absolute;
+  width: var(--small-icon-size);
+  height: var(--small-icon-size);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  margin: 0px 5px 0px 5px;
+}
+
+.top-bar span {
+  margin: 0px 0px 0px 1.75rem;
+}
+
+.top-bar button {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  margin-right: 2px;
+  border: none;
+  box-shadow: var(--box-shadow);
+  background-color: var(--interface-color);
+}
+
+.top-bar button div {
+  width: 10px;
+  height: 10px;
+  background-color: var(--shadow);
+  margin: 0 auto;
+  clip-path: var(--close-icon);
+}
+
+.content {
+  width: calc(100% - 2px);
+  height: calc(100% - 22px);
+  background-color: var(--light);
+  margin: 1px 0px 0px 0px;
+  box-shadow: var(--box-shadow-window);
+}
+
+.wrapper {
+  text-align: left;
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+}
+
+.file-container {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-container i {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+
+/* (4 x 0) + 4 */
+/* div:nth-of-type(4n + 4) { 
+  grid-column-start: 1;
+  grid-column-end: calc(var(--columns) + 1);
+} */
+
+/* button { 
+  --_color: var(--color, blue); this is a pseudo-private property which has a fallback
+  border: 2px solid var(--_color);
+  border-radius: 40px;
+  background-color: transparent;
+  color: var(--_color);
+  font-family: inherit;
+  font-size: inherit;
+  padding: .25em .5em;
+  margin-bottom: 1em;
+  transition: .35s;
+}
+
+button:hover {
+  box-shadow: 0 0 0 5em var(--_color) inset;
+  color: var(--main-color);
+}
+
+.button-pink {
+  --color: pink;
+} */
+
+mark {
+  /* By default <mark> has bg --> yellow / color --> black */
+  background-color: var(--main-color);
+  color: aqua;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color: 	hsl(180, 100%, 25%);
+  }
+
+  .App {
+    background-color: var(--main-color);
+  }
+  
+  @supports (color: lch(0% 0 0)) {
+    /* Only Safari supports 'lch' to date 2021 */
+    :root {
+      --main-color: lch(60% 100 0);
+    }
+  }
+}
+

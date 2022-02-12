@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'windows_command_prompt';
+  src: local('windows_command_prompt'), url('../fonts/windows_command_prompt.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300&display=swap');
+
+:root /* html */ {
+  --main-color: 	hsl(180, 100%, 25%); 
+  /* hsl --> hue {number from 0 to 360, 0 is red, 120 is green, 240 is blue.} - saturation {percent. 0% means a shade of gray and 100% is the full color.} - lightness {percent. 0% is black, 100% is white.} 
+  to choose: https://www.w3schools.com/colors/colors_hsl.asp */
+  --small-icon-size: 18px;
+  --btn-size: 5rem;
+  --navbar-size: 2rem;
+  --shadow: hsl(0,0%,0%);
+  --light: hsl(0,0%,100%);
+  --interface-color: hsl(300,5.2%,73.5%);
+  --interface-color-accent: hsl(308.6,2.8%,48.4%);
+  --hover-color: hsl(240, 100%, 25%);
+  --folder-size: 3rem;
+  --navbar-icon-size: 1.5rem;
+  --menu-size: 200px;
+  --close-icon: polygon(10% 0, 0 10%, 40% 50%, 0 90%, 10% 100%, 50% 60%, 90% 100%, 100% 90%, 60% 50%, 100% 10%, 90% 0, 50% 40%);
+  --box-shadow: var(--light) 1px 1px 0px 0px inset, var(--shadow) -1px -1px 0px 0px inset, var(--interface-color-accent) -1px -1px 0px 1px inset;
+  --box-shadow-inset: var(--interface-color-accent) 1px 1px 0px 0px inset, var(--light) -1px -1px 0px 0px inset;
+  --box-shadow-clicked: var(--shadow) 1px 1px 0px 0px inset, var(--light) -1px -1px 0px 0px inset, var(--interface-color-accent) 1px 1px 0px 1px inset;
+  --box-shadow-window: var(--interface-color-accent) 1px 1px 0px 0px inset, var(--light) -1px -1px 0px 0px inset, var(--shadow) 1px 1px 0px 1px inset, var(--interface-color) -1px -1px 0px 1px inset;
+  color-scheme: light dark; /* enables canvas & canvastext values */
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+

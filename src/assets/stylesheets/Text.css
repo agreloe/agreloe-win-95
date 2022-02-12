@@ -1,0 +1,30 @@
+.window.text {
+    left: calc(100vw - 60vw);
+    bottom: 65%;
+    width: 300px;
+    height: 250px;
+}
+
+.top-bar i.text-icon-small {
+    background-image: url(../icons/message_file-0.png);
+}
+.wrapper.text p a {
+    color: var(--hover-color);
+}
+
+@media screen and (min-width: 320px) and (max-width: 575.98px) {
+    .window.text {
+        left: calc(100vw - 60vw);
+        bottom: 40%;
+        width: 200px;
+        height: 250px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .window.text {
+        left: calc(100vw - 50vw);
+        bottom: 5%;
+        height: 200px;
+    }
+}

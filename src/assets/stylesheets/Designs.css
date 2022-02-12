@@ -1,0 +1,45 @@
+.window.designs {
+    left: calc(100vw - 90vw);
+    bottom: 60%;
+    width: 350px;
+    height: 350px;
+}
+
+.top-bar i.designs-icon-small {
+    background-image: url(../icons/paint_old-0.png);
+}
+
+.wrapper.designs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.file-container i.image-icon-large {
+    background-image: url(../icons/imagpng-1.png);
+}
+
+.file-container i.text-icon {
+    background-image: url(../icons/message_file-0.png);
+}
+
+@media screen and (min-width: 320px) and (max-width: 575.98px) {
+    .window.designs {
+        left: calc(100vw - 95vw);
+        bottom: 10%;
+        width: 250px;
+        height: 200px;
+    }
+
+    .wrapper.designs {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .window.designs {
+        left: calc(100vw - 90vw);
+        bottom: 60%;
+    }
+}

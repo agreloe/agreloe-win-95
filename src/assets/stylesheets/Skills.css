@@ -1,0 +1,80 @@
+.window.skills {
+    left: calc(100vw - 95vw);
+    bottom: 20%;
+    width: 450px;
+    height: 375px;
+}
+
+.top-bar i.console-icon {
+    background-image: url(../icons/console_prompt-0.png);
+}
+  
+.wrapper.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.file-container i.html {
+    background-image: url(../icons/html5-icon-pixel.svg);
+}
+
+.file-container i.css {
+    background-image: url(../icons/css3-icon-pixel.svg);
+}
+
+.file-container i.js {
+    background-image: url(../icons/javascript-icon-pixel.svg);
+}
+
+.file-container i.react {
+    background-image: url(../icons/react-icon-pixel.svg);
+}
+
+.file-container i.redux {
+    background-image: url(../icons/redux-icon-pixel.svg);
+}
+
+.file-container i.nodejs {
+    background-image: url(../icons/nodejs-icon-pixel.svg);
+}
+
+.file-container i.express {
+    background-image: url(../icons/express-pixel.svg);
+}
+
+.file-container i.postgresql {
+    background-image: url(../icons/postgreSQL-pixel.svg);
+}
+
+.file-container i.mongodb {
+    background-image: url(../icons/mongoDB-pixel.svg);
+}
+
+  
+  
+@media screen and (min-width: 320px) and (max-width: 575.98px) {
+    .window.skills {
+        left: calc(100vw - 92.5vw);
+        bottom: 45%;
+        width: 300px;
+        height: 300px;
+    }
+
+    .wrapper.skills {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .file-container i {
+        width: 32px;
+        height: 32px;
+    }
+}
+  
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .window.skills {
+        left: calc(100vw - 95vw);
+        bottom: 25%;
+    }
+}
