@@ -149,7 +149,7 @@ const Navbar = () => {
                 <div className="navbar-icons">
                 <i className="sound-icon" />
                 <i className="internet-icon" />
-                <input className="time-display" type="text" id="currentTime" />
+                <input className="time-display" type="text" disabled="disabled" id="currentTime" />
                 </div>
             </div>
     );

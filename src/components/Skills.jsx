@@ -14,7 +14,7 @@ const Skills = () => {
       <div className="top-bar">
         <i className='console-icon' />
         <span>Skills</span>
-        <button onClick={closeSkills}><div></div></button>
+        <button className='close-skills' onClick={closeSkills}><div></div></button>
       </div>
       <div className="content skills">
         <div className="wrapper skills">

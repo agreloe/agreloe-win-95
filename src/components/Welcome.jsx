@@ -13,7 +13,7 @@ const Welcome = () => {
         <div className="top-bar">
             <i className='text-icon-small' />
             <span>welcome.txt</span>
-            <button onClick={closeWelcome}><div></div></button>
+            <button className='close-welcome' onClick={closeWelcome}><div></div></button>
         </div>
         <div className="content welcome">
             <div className="wrapper welcome">

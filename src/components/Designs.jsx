@@ -33,17 +33,17 @@ const Designs = () => {
         <div className="top-bar">
             <i className='designs-icon-small'></i>
             <span>Designs</span>
-            <button onClick={closeDesigns}><div></div></button>
+            <button className='close-designs' onClick={closeDesigns}><div></div></button>
         </div>
         <div className="content designs">
           <div className="wrapper designs">
 
-            <div className="file-container" onClick={openImage}>
+            <div className="file-container" onClick={openImage} onTouchStart={openImage}>
               <i className='image-icon-large'></i>
               <span>skate_jump.gif</span>
             </div>
 
-            <div className="file-container" onClick={openText}>
+            <div className="file-container" onClick={openText} onTouchStart={openText}>
               <i className='text-icon'></i>
               <span>about.txt</span>
             </div>

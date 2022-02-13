@@ -14,7 +14,7 @@ const Text = () => {
         <div className="top-bar">
             <i className='text-icon-small' />
             <span>about.txt</span>
-            <button onClick={closeText}><div></div></button>
+            <button className='close-text' onClick={closeText}><div></div></button>
         </div>
         <div className="content text">
             <div className="wrapper text">

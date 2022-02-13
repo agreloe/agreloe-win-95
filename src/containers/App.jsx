@@ -1,4 +1,5 @@
 import '../assets/stylesheets/App.css';
+import Draggable from 'react-draggable';
 import Navbar from '../components/Navbar';
 import MenuModal from '../components/MenuModal';
 import Skills from '../components/Skills';
@@ -9,15 +10,18 @@ import Text from '../components/Text';
 import Welcome from '../components/Welcome';
 import SocialsModal from '../components/SocialsModal';
 import { useSelector, useDispatch } from 'react-redux';
-import Draggable from "react-draggable";
 import { focusOnAboutMe, focusOnDesigns, focusOnImage, focusOnSkills, focusOnText, focusOnWelcome, selectWelcome } from '../redux/itemReducer';
+import { useEffect, useState } from 'react';
 
 
 const App = () => {
   const item = useSelector((store)=> store.item);
   const dispatch = useDispatch();
 
+  let [index, setIndex] = useState(10);
+
   const onFocusAboutMe = () => {
+    setIndex(index + 1)
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
     dispatch(focusOnImage(false));
@@ -26,6 +30,7 @@ const App = () => {
     dispatch(focusOnAboutMe(true));
   };
   const onFocusSkills = () => {
+    setIndex(index + 1)
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
     dispatch(focusOnImage(false));
@@ -34,6 +39,7 @@ const App = () => {
     dispatch(focusOnSkills(true));
   }
   const onFocusDesigns = () => {
+    setIndex(index + 1)
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
     dispatch(focusOnImage(false));
@@ -42,6 +48,7 @@ const App = () => {
     dispatch(focusOnDesigns(true));
   };
   const onFocusImage = () => {
+    setIndex(index + 1)
     dispatch(focusOnDesigns(false));
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
@@ -50,6 +57,7 @@ const App = () => {
     dispatch(focusOnImage(true));
   }
   const onFocusText = () => {
+    setIndex(index + 1)
     dispatch(focusOnDesigns(false));
     dispatch(focusOnWelcome(false));
     dispatch(focusOnAboutMe(false));
@@ -58,6 +66,7 @@ const App = () => {
     dispatch(focusOnText(true));
   }
   const onFocusWelcome = () => {
+    setIndex(index + 1)
     dispatch(focusOnAboutMe(false));
     dispatch(focusOnDesigns(false));
     dispatch(focusOnSkills(false));
@@ -69,12 +78,17 @@ const App = () => {
     onFocusWelcome();
     dispatch(selectWelcome(true));
   };
+
+  useEffect(() => {
+    // eslint-disable-next-line
+    let littleCat = `%c \/\\_\/\\\r\n( o.o )\r\n > ^ <`
+    let font = `font-family: monospace`
+    console.log(littleCat,font);
+  },[])
   
 
   return (
     <div className="App">
-
-      
 
       <div className='folder-container' onClick={showWelcome}>
         <i className='icon-welcome'></i>
@@ -83,34 +97,38 @@ const App = () => {
 
       {
         item.designs.isSelected === true && (
-          <Draggable>
-            <div onClick={onFocusDesigns} className={item.designs.isOnFocus ? 'front' : ''}>
+          <Draggable cancel='.close-designs'>
+            <div onClick={onFocusDesigns} onTouchStart={onFocusDesigns} style={item.designs.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
               <Designs />
+            </div>
+            </Draggable>
+        )
+      }
+
+      {
+        item.skills.isSelected === true && (
+          <Draggable cancel='.close-skills'>
+            <div onClick={onFocusSkills} onTouchStart={onFocusSkills} style={item.skills.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
+              <Skills />
             </div>
           </Draggable>
         )
       }
 
       {
-        item.skills.isSelected === true && (    
-          <Draggable>
-            <div onClick={onFocusSkills} className={item.skills.isOnFocus ? 'front' : ''}><Skills /></div>
-          </Draggable>
-        )
-      }
-
-      {
         item.aboutMe.isSelected === true && (
-          <Draggable>
-            <div id="about-me" onClick={onFocusAboutMe} className={item.aboutMe.isOnFocus ? 'front' : ''}><AboutMe /></div>
+          <Draggable cancel=".close-about-me">
+            <div id="about-me" onClick={onFocusAboutMe} onTouchStart={onFocusAboutMe} style={item.aboutMe.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
+              <AboutMe />
+            </div>
           </Draggable>
         )
       }
 
       {
         item.text.isSelected === true && (
-          <Draggable>
-            <div onClick={onFocusText} className={item.text.isOnFocus ? 'front' : ''}>
+          <Draggable cancel='.close-text'>
+            <div onClick={onFocusText} onTouchStart={onFocusText} style={item.text.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
               <Text />
             </div>
           </Draggable>
@@ -119,8 +137,8 @@ const App = () => {
 
       {
         item.image.isSelected === true && (
-          <Draggable>
-            <div onClick={onFocusImage} className={item.image.isOnFocus ? 'front' : ''}>
+          <Draggable cancel='.close-image'>
+            <div onClick={onFocusImage} onTouchStart={onFocusImage} style={item.image.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
               <Image />
             </div>
           </Draggable>
@@ -129,8 +147,8 @@ const App = () => {
 
       {
         item.welcome.isSelected === true && (
-          <Draggable>
-            <div onClick={onFocusWelcome} className={item.welcome.isOnFocus ? 'front' : ''}>
+          <Draggable cancel='.close-welcome'>
+            <div onClick={onFocusWelcome} onTouchStart={onFocusWelcome} style={item.welcome.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
               <Welcome />
             </div>
           </Draggable>

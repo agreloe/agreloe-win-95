@@ -14,7 +14,7 @@ const Image = () => {
       <div className="top-bar">
         <i className="image-icon" />
         <span>skate_jump.gif</span>
-        <button onClick={closeImage}>
+        <button className="close-image" onClick={closeImage}>
           <div></div>
         </button>
       </div>

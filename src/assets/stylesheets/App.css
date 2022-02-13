@@ -42,23 +42,23 @@
   position: absolute;
   bottom: calc(var(--navbar-size) + 1.75rem);
   left: var(--menu-size);
+  z-index: 200;
 }
 
 .menu-position {
   position: absolute;
   bottom: 0;
   left: 0;
-  margin-bottom: calc(var(--navbar-size) + .1rem);
+  margin-bottom: calc(var(--navbar-size) + .05rem);
+  z-index: 200;
 }
 
 .navbar-position {
   position: absolute;
+  left: 0;
+  bottom: 0;
   width: 100%;
   align-self: end;
-}
-
-.react-draggable.react-draggable-dragged.front {
-  z-index: 10;
 }
 
 .window {
