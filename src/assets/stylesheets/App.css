@@ -42,7 +42,6 @@
   position: absolute;
   bottom: calc(var(--navbar-size) + 1.75rem);
   left: var(--menu-size);
-  z-index: 200;
 }
 
 .menu-position {
@@ -50,7 +49,6 @@
   bottom: 0;
   left: 0;
   margin-bottom: calc(var(--navbar-size) + .05rem);
-  z-index: 200;
 }
 
 .navbar-position {
@@ -154,7 +152,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --main-color: 	hsl(180, 100%, 25%);
+    --main-color: hsl(180, 100%, 25%);
   }
 
   .App {
@@ -164,7 +162,7 @@
   @supports (color: lch(0% 0 0)) {
     /* Only Safari supports 'lch' to date 2021 */
     :root {
-      --main-color: lch(60% 100 0);
+      --main-color: lch(47.986% 31.685 196.455);
     }
   }
 }

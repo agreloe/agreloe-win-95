@@ -19,7 +19,7 @@ const AboutMe = () => {
         <div className="content about-me">
             <div className="wrapper about-me">
                 <h1>Erika Agrelo</h1>
-                <h2>Sobre mi</h2>
+                <h2>Sobre mí</h2>
                 <p>Soy social, creativa y apasionada de la programación y el diseño.</p>
                 <p>Me gustan los desafíos y aprender constantemente.</p>
                 <p>Me siento cómoda trabajando en equipo ya que me puedo adaptar fácilmente a cualquier situación y dar lo mejor de mí en cada proyecto.</p>

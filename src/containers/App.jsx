@@ -96,6 +96,26 @@ const App = () => {
       </div>
 
       {
+        item.text.isSelected === true && (
+          <Draggable cancel='.close-text, .text-link'>
+            <div onClick={onFocusText} onTouchStart={onFocusText} style={item.text.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
+              <Text />
+            </div>
+          </Draggable>
+        )
+      }
+
+      {
+        item.image.isSelected === true && (
+          <Draggable cancel='.close-image'>
+            <div onClick={onFocusImage} onTouchStart={onFocusImage} style={item.image.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
+              <Image />
+            </div>
+          </Draggable>
+        )
+      }
+
+      {
         item.designs.isSelected === true && (
           <Draggable cancel='.close-designs'>
             <div onClick={onFocusDesigns} onTouchStart={onFocusDesigns} style={item.designs.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
@@ -126,26 +146,6 @@ const App = () => {
       }
 
       {
-        item.text.isSelected === true && (
-          <Draggable cancel='.close-text'>
-            <div onClick={onFocusText} onTouchStart={onFocusText} style={item.text.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
-              <Text />
-            </div>
-          </Draggable>
-        )
-      }
-
-      {
-        item.image.isSelected === true && (
-          <Draggable cancel='.close-image'>
-            <div onClick={onFocusImage} onTouchStart={onFocusImage} style={item.image.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
-              <Image />
-            </div>
-          </Draggable>
-        )
-      }
-
-      {
         item.welcome.isSelected === true && (
           <Draggable cancel='.close-welcome'>
             <div onClick={onFocusWelcome} onTouchStart={onFocusWelcome} style={item.welcome.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
@@ -157,7 +157,7 @@ const App = () => {
 
       {
         item.socials.isSelected === true && (
-          <div className='socials-modal-position'>
+          <div className='socials-modal-position' style={{zIndex:`${index + 100}`}}>
             <SocialsModal />
           </div>
         )
@@ -165,7 +165,7 @@ const App = () => {
 
       {
        item.isOpen === true && (
-          <div className='menu-position'>
+          <div className='menu-position' style={{zIndex:`${index + 100}`}}>
             <MenuModal />
           </div>
        ) 
