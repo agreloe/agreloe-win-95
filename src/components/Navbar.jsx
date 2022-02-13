@@ -1,6 +1,6 @@
 import "../assets/stylesheets/Navbar.css";
 import { useEffect } from "react";
-import { openMenu, selectSocials } from '../redux/itemReducer';
+import { openMenu, selectSocials, focusOnAboutMe, focusOnDesigns, focusOnSkills, focusOnImage, focusOnText, focusOnWelcome } from '../redux/itemReducer';
 import { useSelector, useDispatch } from "react-redux";
 
 const Navbar = () => {
@@ -10,6 +10,60 @@ const Navbar = () => {
     const onClickHandler = () => {
         dispatch(openMenu(!item.isOpen));
         dispatch(selectSocials(false));
+    };
+
+    const onFocusAboutMeHandler = () => {
+        dispatch(focusOnWelcome(false));
+        dispatch(focusOnText(false));
+        dispatch(focusOnImage(false));
+        dispatch(focusOnSkills(false));
+        dispatch(focusOnDesigns(false));
+        dispatch(focusOnAboutMe(true));
+    };
+    
+    const onFocusSkillsHandler = () => {
+        dispatch(focusOnSkills(true));
+        dispatch(focusOnWelcome(false));
+        dispatch(focusOnText(false));
+        dispatch(focusOnImage(false));
+        dispatch(focusOnDesigns(false));
+        dispatch(focusOnAboutMe(false));
+    };
+    
+    const onFocusDesignsHandler = () => {
+        dispatch(focusOnDesigns(true));
+        dispatch(focusOnWelcome(false));
+        dispatch(focusOnText(false));
+        dispatch(focusOnImage(false));
+        dispatch(focusOnAboutMe(false));
+        dispatch(focusOnSkills(false));
+    };
+    
+    const onFocusWelcomeHandler = () => {
+        dispatch(focusOnWelcome(true));
+        dispatch(focusOnText(false));
+        dispatch(focusOnImage(false));
+        dispatch(focusOnAboutMe(false));
+        dispatch(focusOnSkills(false));
+        dispatch(focusOnDesigns(false));
+    };
+    
+    const onFocusTextHandler = () => {
+        dispatch(focusOnText(true));
+        dispatch(focusOnImage(false));
+        dispatch(focusOnAboutMe(false));
+        dispatch(focusOnSkills(false));
+        dispatch(focusOnDesigns(false));
+        dispatch(focusOnWelcome(false));
+    };
+    
+    const onFocusImageHandler = () => {
+        dispatch(focusOnImage(true));
+        dispatch(focusOnAboutMe(false));
+        dispatch(focusOnSkills(false));
+        dispatch(focusOnDesigns(false));
+        dispatch(focusOnWelcome(false));
+        dispatch(focusOnText(false));
     };
 
     let curTime = () => {
@@ -37,7 +91,7 @@ const Navbar = () => {
                 <div className="navbar-elements">
                     {
                         item.aboutMe.isSelected === true && (
-                            <div className={`element about-me${item.aboutMe.isOnFocus ? " focus" : ""}`}>
+                            <div onClick={onFocusAboutMeHandler} className={`element about-me${item.aboutMe.isOnFocus ? " focus" : ""}`}>
                                 <i />
                                 <span>About me</span>
                             </div>
@@ -46,7 +100,7 @@ const Navbar = () => {
                     }
                     {
                         item.skills.isSelected === true && (
-                            <div className={`element skills${item.skills.isOnFocus ? " focus" : ""}`}>
+                            <div onClick={onFocusSkillsHandler} className={`element skills${item.skills.isOnFocus ? " focus" : ""}`}>
                                 <i />
                                 <span>Skills</span>
                             </div>
@@ -55,7 +109,7 @@ const Navbar = () => {
                     }
                     {
                         item.designs.isSelected === true && (
-                            <div className={`element designs${item.designs.isOnFocus ? " focus" : ""}`}>
+                            <div onClick={onFocusDesignsHandler} className={`element designs${item.designs.isOnFocus ? " focus" : ""}`}>
                                 <i />
                                 <span>Designs</span>
                             </div>
@@ -64,7 +118,7 @@ const Navbar = () => {
                     }
                     {
                         item.welcome.isSelected === true && (
-                            <div className={`element welcome${item.welcome.isOnFocus ? " focus" : ""}`}>
+                            <div onClick={onFocusWelcomeHandler} className={`element welcome${item.welcome.isOnFocus ? " focus" : ""}`}>
                                 <i />
                                 <span>welcome.txt</span>
                             </div>
@@ -73,7 +127,7 @@ const Navbar = () => {
                     }
                     {
                         item.text.isSelected === true && (
-                            <div className={`element text${item.text.isOnFocus ? " focus" : ""}`}>
+                            <div onClick={onFocusTextHandler} className={`element text${item.text.isOnFocus ? " focus" : ""}`}>
                                 <i />
                                 <span>about.txt</span>
                             </div>
@@ -82,7 +136,7 @@ const Navbar = () => {
                     }
                     {
                         item.image.isSelected === true && (
-                            <div className={`element image${item.image.isOnFocus ? " focus" : ""}`}>
+                            <div onClick={onFocusImageHandler} className={`element image${item.image.isOnFocus ? " focus" : ""}`}>
                                 <i />
                                 <span>skate_jump.gif</span>
                             </div>
