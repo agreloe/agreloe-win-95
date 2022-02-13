@@ -1,16 +1,6 @@
 .App {
   text-align: center;
   font-size: 90%;
-  /*
-  color: canvastext;
-  in light mode: canvas --> white / canvastext --> black
-  in dark mode: canvas --> black / canvastext --> white
-  */
-  /* font-family: "windows_command_prompt"; 
-  font-family: 'Source Code Pro', monospace;
-  font-family: 'Archivo', sans-serif;
-  font-family: 'Manrope', sans-serif;
-  */
   font-family: 'Anonymous Pro', monospace;
   color: var(--shadow);
   background-color: var(--main-color);
@@ -46,6 +36,12 @@
   height: auto;
   margin: 0;
   color: var(--light);
+}
+
+.socials-modal-position {
+  position: absolute;
+  bottom: calc(var(--navbar-size) + 1.75rem);
+  left: var(--menu-size);
 }
 
 .menu-position {
@@ -149,38 +145,11 @@
 }
 
 
-/* (4 x 0) + 4 */
-/* div:nth-of-type(4n + 4) { 
-  grid-column-start: 1;
-  grid-column-end: calc(var(--columns) + 1);
-} */
-
-/* button { 
-  --_color: var(--color, blue); this is a pseudo-private property which has a fallback
-  border: 2px solid var(--_color);
-  border-radius: 40px;
-  background-color: transparent;
-  color: var(--_color);
-  font-family: inherit;
-  font-size: inherit;
-  padding: .25em .5em;
-  margin-bottom: 1em;
-  transition: .35s;
-}
-
-button:hover {
-  box-shadow: 0 0 0 5em var(--_color) inset;
-  color: var(--main-color);
-}
-
-.button-pink {
-  --color: pink;
-} */
-
-mark {
-  /* By default <mark> has bg --> yellow / color --> black */
-  background-color: var(--main-color);
-  color: aqua;
+@media screen and (min-width: 320px) and (max-width: 575.98px) {
+  .socials-modal-position {
+    bottom: calc(var(--navbar-size) + .25rem);
+    left: calc(var(--menu-size) - 30px);
+  }
 }
 
 @media (prefers-color-scheme: dark) {

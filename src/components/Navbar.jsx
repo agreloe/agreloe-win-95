@@ -1,6 +1,6 @@
 import "../assets/stylesheets/Navbar.css";
 import { useEffect } from "react";
-import { openMenu } from '../redux/itemReducer';
+import { openMenu, selectSocials } from '../redux/itemReducer';
 import { useSelector, useDispatch } from "react-redux";
 
 const Navbar = () => {
@@ -9,6 +9,7 @@ const Navbar = () => {
 
     const onClickHandler = () => {
         dispatch(openMenu(!item.isOpen));
+        dispatch(selectSocials(false));
     };
 
     let curTime = () => {

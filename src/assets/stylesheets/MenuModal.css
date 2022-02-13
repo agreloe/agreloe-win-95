@@ -20,7 +20,7 @@
 }
 
 .item:hover,
-.item:hover button.item-name{
+.item.mail:hover a{
     background-color: var(--hover-color);
     color: var(--light);
 }
@@ -47,6 +47,21 @@
     color: var(--shadow);
     text-align: left;
     padding: 1rem 0 1rem 0;
+    right: 100px;
+}
+
+.item div.arrow {
+    position: absolute;
+    left: calc(var(--menu-size) - 20px);
+    width: 10px;
+    height: 10px;
+    background-color: var(--shadow);
+    margin: 0 auto;
+    clip-path: var(--arrow-icon);
+}
+
+.item:hover div.arrow {
+    background-color: var(--light);
 }
 
 .br {
@@ -90,5 +105,8 @@ i.designs-icon {
     .item i {
         height: 1.5rem;
         width:  1.5rem;
+    }
+    .item div.arrow {
+        left: calc(var(--menu-size) - 50px);
     }
 }

@@ -1,10 +1,11 @@
 import React from 'react';
 import '../assets/stylesheets/MenuModal.css'
-import { selectAboutMe, selectSkills, selectDesigns, openMenu, focusOnWelcome, focusOnAboutMe, focusOnText, focusOnImage, focusOnDesigns, focusOnSkills } from '../redux/itemReducer';
-import { useDispatch } from "react-redux";
+import { selectAboutMe, selectSkills, selectDesigns, selectSocials, openMenu, focusOnWelcome, focusOnAboutMe, focusOnText, focusOnImage, focusOnDesigns, focusOnSkills } from '../redux/itemReducer';
+import { useSelector, useDispatch } from "react-redux";
 
 
 const MenuModal = () => {
+    const item = useSelector((store)=> store.item);
     const dispatch = useDispatch();
 
     const closeMenu = () => {
@@ -20,6 +21,7 @@ const MenuModal = () => {
         dispatch(focusOnSkills(false));
         dispatch(focusOnAboutMe(true));
         dispatch(selectAboutMe(true));
+        hoverOutSocials();
         closeMenu();
     };
 
@@ -31,6 +33,7 @@ const MenuModal = () => {
         dispatch(focusOnAboutMe(false));
         dispatch(focusOnSkills(true));
         dispatch(selectSkills(true));
+        hoverOutSocials();
         closeMenu();
     };
 
@@ -42,8 +45,16 @@ const MenuModal = () => {
         dispatch(focusOnSkills(false));
         dispatch(focusOnDesigns(true));
         dispatch(selectDesigns(true));
+        hoverOutSocials();
         closeMenu();
     }
+    const clickOnSocials = () => {
+        dispatch(selectSocials(!item.socials.isSelected));
+    };
+    const hoverOutSocials = () => {
+        dispatch(selectSocials(false));
+    };
+
 
     return (
         <div className='menu'>
@@ -57,9 +68,10 @@ const MenuModal = () => {
                     <i className='aboutMe-icon' />
                     <span>About me</span>
                 </li>
-                <li className='item'>
+                <li className='item' onClick={clickOnSocials}>
                     <i className='socials-icon' />
                     <span>Socials</span>
+                    <div className='arrow'></div>
                 </li>
                 <li className='item' onClick={openSkills}>
                     <i className='skills-icon' />

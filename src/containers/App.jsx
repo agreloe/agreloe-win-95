@@ -7,6 +7,7 @@ import Designs from '../components/Designs';
 import Image from '../components/Image';
 import Text from '../components/Text';
 import Welcome from '../components/Welcome';
+import SocialsModal from '../components/SocialsModal';
 import { useSelector, useDispatch } from 'react-redux';
 import Draggable from "react-draggable";
 import { focusOnAboutMe, focusOnDesigns, focusOnImage, focusOnSkills, focusOnText, focusOnWelcome, selectWelcome } from '../redux/itemReducer';
@@ -68,9 +69,12 @@ const App = () => {
     onFocusWelcome();
     dispatch(selectWelcome(true));
   };
+  
 
   return (
     <div className="App">
+
+      
 
       <div className='folder-container' onClick={showWelcome}>
         <i className='icon-welcome'></i>
@@ -130,6 +134,14 @@ const App = () => {
               <Welcome />
             </div>
           </Draggable>
+        )
+      }
+
+      {
+        item.socials.isSelected === true && (
+          <div className='socials-modal-position'>
+            <SocialsModal />
+          </div>
         )
       }
 
