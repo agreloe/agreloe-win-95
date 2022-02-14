@@ -13,6 +13,7 @@
     display: inline-block;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center center;
     width: 20px;
     height: 20px;
 }
@@ -115,7 +116,7 @@
     background-image: url(../icons/conn_pcs_on_on.png);
 }
   
-.time-display {
+.navbar-icons input.time-display {
     width: 3rem;
     box-sizing: border-box;
     border: none;
@@ -129,4 +130,22 @@
     .element span {
       display: none;
     }
+
+    .navbar i {
+        width: 15px;
+        height: 15px;
+    }
+
+    .navbar-icons input.time-display {
+        font-size: 85%;
+    }
+
+    .navbar-icons input:disabled {
+        color: var(--box-shadow) !important;
+    }
+
+    .start-btn button span {
+        font-size: 85%;
+    }
+
 }

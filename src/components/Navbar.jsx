@@ -85,7 +85,7 @@ const Navbar = () => {
             <div className="navbar">
                 <button id="startBtn" className={`start-btn${item.isOpen === true ? " start-click" : ""}`} onClick={onClickHandler}>
                 <i className="pc-icon" />
-                Start
+                <span>Start</span>
                 </button>
 
                 <div className="navbar-elements">

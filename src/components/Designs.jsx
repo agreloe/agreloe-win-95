@@ -15,8 +15,8 @@ const Designs = () => {
     dispatch(focusOnSkills(false));
     dispatch(focusOnDesigns(false));
     dispatch(focusOnText(false));
-    dispatch(focusOnImage(true));
     dispatch(selectImage(true))
+    dispatch(focusOnImage(true));
   };
   const openText = () => {
     dispatch(focusOnWelcome(false));
@@ -24,8 +24,8 @@ const Designs = () => {
     dispatch(focusOnAboutMe(false));
     dispatch(focusOnSkills(false));
     dispatch(focusOnDesigns(false));
-    dispatch(focusOnText(true));
     dispatch(selectText(true));
+    dispatch(focusOnText(true));
   };
 
   return (

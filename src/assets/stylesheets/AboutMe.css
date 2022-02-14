@@ -9,24 +9,35 @@
   background-image: url(../icons/help_book_big-0.png);
 }
 
-.content.about-me {
-  overflow-y: scroll !important;
+.wrapper.about-me {
+  width: 100%;
+  height: calc(100% + 1px);
+  -webkit-overflow-scrolling: touch !important;
+  overflow-y: auto !important;
 }
 
-.content.about-me::-webkit-scrollbar {
+.wrapper.about-me::-webkit-scrollbar {
   width: 18px;
-  left: -6px;
 }
 
-.content.about-me::-webkit-scrollbar-thumb {
+.wrapper.about-me::-webkit-scrollbar-thumb {
   background-color: var(--interface-color);
   box-shadow: var(--shadow) 1px 1px 0px 0px inset, var(--interface-color-accent) 1px 1px 0px 1px inset, var(--shadow) -1px -1px 0px 0px inset, var(--interface-color-accent) -1px -1px 0px 1px inset;
 }
 
+.wrapper.about-me h1,
+.wrapper.about-me h2,
+.wrapper.about-me h3,
+.wrapper.about-me p {
+  padding-left: 1rem;
+}
+
+
+
 @media screen and (min-width: 320px) and (max-width: 575.98px) {
   .window.about-me {
-    left: calc(100vw - 80vw);
-    bottom: 20%;
+    left: 85px;
+    bottom: 200px;
     width: 275px;
     height: 400px;
   }

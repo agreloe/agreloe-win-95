@@ -3,10 +3,28 @@
   font-size: 90%;
   font-family: 'Anonymous Pro', monospace;
   color: var(--shadow);
-  background-color: var(--main-color);
-  min-height: 100vh;
+  /* 
+  background-color: blue;
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
   display: flex;
+  */
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: calc(100vh - var(--navbar-size)) var(--navbar-size);
   overflow-y: hidden;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color);
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .folder-container {
@@ -150,7 +168,7 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --main-color: hsl(180, 100%, 25%);
   }
@@ -160,10 +178,10 @@
   }
   
   @supports (color: lch(0% 0 0)) {
-    /* Only Safari supports 'lch' to date 2021 */
+     Only Safari supports 'lch' to date 2021 
     :root {
       --main-color: lch(47.986% 31.685 196.455);
     }
   }
 }
-
+ */

@@ -10,7 +10,7 @@ import Text from '../components/Text';
 import Welcome from '../components/Welcome';
 import SocialsModal from '../components/SocialsModal';
 import { useSelector, useDispatch } from 'react-redux';
-import { focusOnAboutMe, focusOnDesigns, focusOnImage, focusOnSkills, focusOnText, focusOnWelcome, selectWelcome } from '../redux/itemReducer';
+import { focusOnAboutMe, focusOnDesigns, focusOnImage, focusOnSkills, focusOnText, focusOnWelcome, selectWelcome, openMenu } from '../redux/itemReducer';
 import { useEffect, useState } from 'react';
 
 
@@ -22,6 +22,7 @@ const App = () => {
 
   const onFocusAboutMe = () => {
     setIndex(index + 1)
+    dispatch(openMenu(false));
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
     dispatch(focusOnImage(false));
@@ -31,6 +32,7 @@ const App = () => {
   };
   const onFocusSkills = () => {
     setIndex(index + 1)
+    dispatch(openMenu(false));
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
     dispatch(focusOnImage(false));
@@ -40,6 +42,7 @@ const App = () => {
   }
   const onFocusDesigns = () => {
     setIndex(index + 1)
+    dispatch(openMenu(false));
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
     dispatch(focusOnImage(false));
@@ -49,6 +52,7 @@ const App = () => {
   };
   const onFocusImage = () => {
     setIndex(index + 1)
+    dispatch(openMenu(false));
     dispatch(focusOnDesigns(false));
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
@@ -58,6 +62,7 @@ const App = () => {
   }
   const onFocusText = () => {
     setIndex(index + 1)
+    dispatch(openMenu(false));
     dispatch(focusOnDesigns(false));
     dispatch(focusOnWelcome(false));
     dispatch(focusOnAboutMe(false));
@@ -67,6 +72,7 @@ const App = () => {
   }
   const onFocusWelcome = () => {
     setIndex(index + 1)
+    dispatch(openMenu(false));
     dispatch(focusOnAboutMe(false));
     dispatch(focusOnDesigns(false));
     dispatch(focusOnSkills(false));
@@ -85,10 +91,12 @@ const App = () => {
     let font = `font-family: monospace`
     console.log(littleCat,font);
   },[])
-  
 
   return (
+    
     <div className="App">
+
+      <div className="screen"></div>
 
       <div className='folder-container' onClick={showWelcome}>
         <i className='icon-welcome'></i>
@@ -137,7 +145,7 @@ const App = () => {
 
       {
         item.aboutMe.isSelected === true && (
-          <Draggable cancel=".close-about-me">
+          <Draggable cancel=".close-about-me, .content.about-me">
             <div id="about-me" onClick={onFocusAboutMe} onTouchStart={onFocusAboutMe} style={item.aboutMe.isOnFocus ? {zIndex:`${index}`} : {zIndex: `${index - 1}`}}>
               <AboutMe />
             </div>
@@ -171,9 +179,12 @@ const App = () => {
        ) 
       }
 
-      <div className='navbar-position'>
+
+
+      <div className='navbar-position' style={{zIndex:`${index + 100}`}}>
         <Navbar />
       </div>
+
 
     </div>
   );
