@@ -1,6 +1,6 @@
 .window.designs {
-    left: calc(100vw - 90vw);
-    bottom: 60%;
+    left: 100px;
+    bottom: 200px;
     width: 350px;
     height: 350px;
 }
@@ -23,7 +23,7 @@
     background-image: url(../icons/message_file-0.png);
 }
 
-@media screen and (min-width: 320px) and (max-width: 575.98px) {
+@media only screen and (min-width: 320px) and (max-width: 575.98px) {
     .window.designs {
         left: 35px;
         bottom: 400px;
@@ -37,9 +37,16 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
     .window.designs {
-        left: calc(100vw - 90vw);
-        bottom: 60%;
+        left: 70px;
+        bottom: 100px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1440px) {
+    .window.designs {
+        left: 80px;
+        bottom: 150px;
     }
 }

@@ -126,7 +126,7 @@
     font-size: inherit;
 }
 
-@media screen and (min-width: 320px) and (max-width: 575.98px) {
+@media only screen and (min-width: 320px) and (max-width: 575.98px) {
     .element span {
       display: none;
     }
@@ -136,16 +136,16 @@
         height: 15px;
     }
 
-    .navbar-icons input.time-display {
-        font-size: 85%;
-    }
-
     .navbar-icons input:disabled {
-        color: var(--box-shadow) !important;
+        color: var(--shadow) !important;
     }
+}
 
-    .start-btn button span {
-        font-size: 85%;
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    .element span {
+        font-size: 80%;
     }
-
+    .start-btn span {
+        font-size: 80%;
+    }
 }

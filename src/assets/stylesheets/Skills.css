@@ -1,6 +1,6 @@
 .window.skills {
-    left: calc(100vw - 95vw);
-    bottom: 20%;
+    left: 500px;
+    bottom: 300px;
     width: 450px;
     height: 375px;
 }
@@ -53,9 +53,9 @@
 
   
   
-@media screen and (min-width: 320px) and (max-width: 575.98px) {
+@media only screen and (min-width: 320px) and (max-width: 575.98px) {
     .window.skills {
-        left: 40px;
+        left: 30px;
         bottom: 70px;
         width: 300px;
         height: 300px;
@@ -72,9 +72,17 @@
     }
 }
   
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
     .window.skills {
-        left: calc(100vw - 95vw);
-        bottom: 25%;
+        left: 40px;
+        bottom: 200px;
     }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1440px) {
+    .window.skills {
+        left: 100px;
+        bottom: 150px;
+    }
+
 }

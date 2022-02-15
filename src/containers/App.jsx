@@ -84,6 +84,9 @@ const App = () => {
     onFocusWelcome();
     dispatch(selectWelcome(true));
   };
+  const closeMenu = () => {
+    dispatch(openMenu(false));
+  };
 
   useEffect(() => {
     // eslint-disable-next-line
@@ -96,7 +99,7 @@ const App = () => {
     
     <div className="App">
 
-      <div className="screen"></div>
+      <div className="screen" onClick={closeMenu} onTouchStart={closeMenu}></div>
 
       <div className='folder-container' onClick={showWelcome}>
         <i className='icon-welcome'></i>

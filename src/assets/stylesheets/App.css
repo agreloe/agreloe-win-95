@@ -3,13 +3,6 @@
   font-size: 90%;
   font-family: 'Anonymous Pro', monospace;
   color: var(--shadow);
-  /* 
-  background-color: blue;
-  width: 100%;
-  height: 100vh;
-  min-height: 100%;
-  display: flex;
-  */
   width: 100%;
   height: 100%;
   display: grid;
@@ -161,7 +154,7 @@
 }
 
 
-@media screen and (min-width: 320px) and (max-width: 575.98px) {
+@media only screen and (min-width: 320px) and (max-width: 575.98px) {
   .socials-modal-position {
     bottom: calc(var(--navbar-size) + .25rem);
     left: calc(var(--menu-size) - 30px);

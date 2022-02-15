@@ -1,6 +1,6 @@
 .window.image {
-    left: calc(100vw - 60vw);
-    bottom: 15%;
+    left: 600px;
+    bottom: 100px;
     width: 350px;
     height: 350px;
 }
@@ -15,7 +15,7 @@
     margin: 0 auto;
 }
 
-@media screen and (min-width: 320px) and (max-width: 575.98px) {
+@media only screen and (min-width: 320px) and (max-width: 575.98px) {
     .window.image {
         left: 150px;
         bottom: 50px;
@@ -24,9 +24,16 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
     .window.image {
-        left: calc(100vw - 90vw);
-        bottom: 10%;
+        left: 400px;
+        bottom: 70px;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1440px) {
+    .window.image {
+        left: 500px;
+        bottom: 150px;
     }
 }
