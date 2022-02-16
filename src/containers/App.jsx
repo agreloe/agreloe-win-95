@@ -10,7 +10,7 @@ import Text from '../components/Text';
 import Welcome from '../components/Welcome';
 import SocialsModal from '../components/SocialsModal';
 import { useSelector, useDispatch } from 'react-redux';
-import { focusOnAboutMe, focusOnDesigns, focusOnImage, focusOnSkills, focusOnText, focusOnWelcome, selectWelcome, openMenu } from '../redux/itemReducer';
+import { focusOnAboutMe, focusOnDesigns, focusOnImage, focusOnSkills, focusOnText, focusOnWelcome, selectWelcome, openMenu, selectSocials } from '../redux/itemReducer';
 import { useEffect, useState } from 'react';
 
 
@@ -19,6 +19,7 @@ const App = () => {
   const dispatch = useDispatch();
 
   let [index, setIndex] = useState(10);
+  
 
   const onFocusAboutMe = () => {
     setIndex(index + 1)
@@ -85,6 +86,7 @@ const App = () => {
     dispatch(selectWelcome(true));
   };
   const closeMenu = () => {
+    dispatch(selectSocials(false));
     dispatch(openMenu(false));
   };
 

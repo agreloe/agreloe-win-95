@@ -35,7 +35,7 @@
 }
 
 .start-btn.start-click {
-    outline: rgb(0, 0, 0) dotted 1px;
+    outline: var(--shadow) dotted 1px;
     outline-offset: -4px;
     box-shadow: var(--box-shadow-clicked);
 }
@@ -63,7 +63,7 @@
 }
 
 .element.focus {
-    outline: rgb(0, 0, 0) dotted 1px;
+    outline: var(--shadow) dotted 1px;
     outline-offset: -4px;
     box-shadow: var(--box-shadow-clicked);
 }
@@ -104,7 +104,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     box-shadow: var(--box-shadow-inset);
 }
   
@@ -137,6 +137,7 @@
     }
 
     .navbar-icons input:disabled {
+        -webkit-appearance: none;
         color: var(--shadow) !important;
     }
 }
