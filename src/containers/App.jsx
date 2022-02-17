@@ -23,6 +23,7 @@ const App = () => {
 
   const onFocusAboutMe = () => {
     setIndex(index + 1)
+    dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
@@ -33,6 +34,7 @@ const App = () => {
   };
   const onFocusSkills = () => {
     setIndex(index + 1)
+    dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
@@ -43,6 +45,7 @@ const App = () => {
   }
   const onFocusDesigns = () => {
     setIndex(index + 1)
+    dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnWelcome(false));
     dispatch(focusOnText(false));
@@ -53,6 +56,7 @@ const App = () => {
   };
   const onFocusImage = () => {
     setIndex(index + 1)
+    dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnDesigns(false));
     dispatch(focusOnWelcome(false));
@@ -63,6 +67,7 @@ const App = () => {
   }
   const onFocusText = () => {
     setIndex(index + 1)
+    dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnDesigns(false));
     dispatch(focusOnWelcome(false));
@@ -73,6 +78,7 @@ const App = () => {
   }
   const onFocusWelcome = () => {
     setIndex(index + 1)
+    dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnAboutMe(false));
     dispatch(focusOnDesigns(false));
