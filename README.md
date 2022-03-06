@@ -6,4 +6,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is my Windows 95 Desktop :)
 
-https://agreloe.netlify.app/
+https://agreloe.com
