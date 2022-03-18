@@ -14,7 +14,7 @@
   width: 100%;
   height: 100%;
   /* background-color: var(--main-color); */
-  background-image: url(../videos/aberAhora.png);
+  background-image: url(https://ik.imagekit.io/c9tj2d0xqow/tr:auto/aberAhora_VNjjJhRcRB.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -173,9 +173,9 @@
   .App {
     background-color: var(--main-color);
   }
-  
+
   @supports (color: lch(0% 0 0)) {
-     Only Safari supports 'lch' to date 2021 
+     Only Safari supports 'lch' to date 2021
     :root {
       --main-color: lch(47.986% 31.685 196.455);
     }
