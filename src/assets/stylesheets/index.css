@@ -13,7 +13,6 @@
   --navbar-size: 2rem;
   --shadow: hsl(0,0%,0%);
   --light: hsl(0,0%,100%);
-  /* --interface-color: hsl(300,5.2%,73.5%); */
   --interface-color:hsl(262, 43%, 74%);
   --interface-color-accent: hsl(308.6,2.8%,48.4%);
   --hover-color: hsl(240, 100%, 25%);
