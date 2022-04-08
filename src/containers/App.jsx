@@ -11,7 +11,7 @@ import Welcome from '../components/Welcome';
 import SocialsModal from '../components/SocialsModal';
 import { useSelector, useDispatch } from 'react-redux';
 import { focusOnAboutMe, focusOnDesigns, focusOnImage, focusOnSkills, focusOnText, focusOnWelcome, selectWelcome, openMenu, selectSocials } from '../redux/itemReducer';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import bgImg from '../assets/videos/ezgif.com-gif-maker.jpg';
 import bgImgWebp from '../assets/videos/agreloE_Bg.webp';
 
@@ -20,11 +20,9 @@ const App = () => {
   const item = useSelector((store)=> store.item);
   const dispatch = useDispatch();
 
-  let [index, setIndex] = useState(10);
-
+  let index = 10;
 
   const onFocusAboutMe = () => {
-    setIndex(index + 1)
     dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnWelcome(false));
@@ -35,7 +33,6 @@ const App = () => {
     dispatch(focusOnAboutMe(true));
   };
   const onFocusSkills = () => {
-    setIndex(index + 1)
     dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnWelcome(false));
@@ -46,7 +43,6 @@ const App = () => {
     dispatch(focusOnSkills(true));
   }
   const onFocusDesigns = () => {
-    setIndex(index + 1)
     dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnWelcome(false));
@@ -57,7 +53,6 @@ const App = () => {
     dispatch(focusOnDesigns(true));
   };
   const onFocusImage = () => {
-    setIndex(index + 1)
     dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnDesigns(false));
@@ -68,7 +63,6 @@ const App = () => {
     dispatch(focusOnImage(true));
   }
   const onFocusText = () => {
-    setIndex(index + 1)
     dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnDesigns(false));
@@ -79,7 +73,6 @@ const App = () => {
     dispatch(focusOnText(true));
   }
   const onFocusWelcome = () => {
-    setIndex(index + 1)
     dispatch(selectSocials(false));
     dispatch(openMenu(false));
     dispatch(focusOnAboutMe(false));
