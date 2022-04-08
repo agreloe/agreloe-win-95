@@ -18,8 +18,7 @@ const Text = () => {
         </div>
         <div className="content text">
             <div className="wrapper text">
-                <p>Holis! Para seguir con la estética vintage, me pareció divertido agregar una animación pixel-art de un personaje que diseñé para un juego desarrollado con Construct.</p>
-                <p>Para ver más de mi portfolio en Behance hacer clic <a className='text-link' href='https://www.behance.net/agreloe' target='_blank' rel='noreferrer'>aquí.</a></p>
+                <p>To see more of my designs click <a className='text-link' href='https://www.behance.net/agreloe' target='_blank' rel='noreferrer'>here.</a></p>
             </div>
         </div>
     </div>

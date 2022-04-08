@@ -1,8 +1,8 @@
 .window.image {
     left: 600px;
     bottom: 100px;
-    width: 350px;
-    height: 350px;
+    width: 250px;
+    height: 250px;
 }
 
 .top-bar i.image-icon {
@@ -17,8 +17,8 @@
 
 @media only screen and (min-width: 320px) and (max-width: 575.98px) {
     .window.image {
-        left: 150px;
-        bottom: 180px;
+        left: 160px;
+        bottom: 70px;
         width: 200px;
         height: 200px;
     }
@@ -33,7 +33,7 @@
 
 @media only screen and (min-width: 1200px) and (max-width: 1440px) {
     .window.image {
-        left: 500px;
-        bottom: 150px;
+        left: 400px;
+        bottom: 90px;
     }
 }

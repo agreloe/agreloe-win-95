@@ -39,14 +39,14 @@
 
 @media only screen and (min-width: 768px) and (max-width: 991.98px) {
     .window.designs {
-        left: 70px;
-        bottom: 100px;
+        left: 100px;
+        bottom: 200px;
     }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1440px) {
     .window.designs {
-        left: 80px;
-        bottom: 150px;
+        left: 220px;
+        bottom: 250px;
     }
 }

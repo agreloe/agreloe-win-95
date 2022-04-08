@@ -17,10 +17,8 @@ const Welcome = () => {
         </div>
         <div className="content welcome">
             <div className="wrapper welcome">
-                <p>{`Holis! Bienvenide a mi escritorio de Windows 95 :)`}</p>
-                <p>Las ventanas se pueden desplazar a través de la pantalla.</p>
-                <p>Está permitido fisgonear mi pc jeje.</p>
-                <p>- Eri.</p>
+                <p>This is my windows95 Desktop</p>
+                <p>-Agreloe</p>
             </div>
         </div>
     </div>

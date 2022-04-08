@@ -13,15 +13,15 @@
 .screen {
   width: 100%;
   height: 100%;
-  /* background-color: var(--main-color); */
-  background-image: url(https://ik.imagekit.io/c9tj2d0xqow/tr:auto/aberAhora_VNjjJhRcRB.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
   display: inline-block;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .folder-container {

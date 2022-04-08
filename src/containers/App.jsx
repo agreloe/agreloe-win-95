@@ -12,6 +12,8 @@ import SocialsModal from '../components/SocialsModal';
 import { useSelector, useDispatch } from 'react-redux';
 import { focusOnAboutMe, focusOnDesigns, focusOnImage, focusOnSkills, focusOnText, focusOnWelcome, selectWelcome, openMenu, selectSocials } from '../redux/itemReducer';
 import { useEffect, useState } from 'react';
+import bgImg from '../assets/videos/ezgif.com-gif-maker.jpg';
+import bgImgWebp from '../assets/videos/agreloE_Bg.webp';
 
 
 const App = () => {
@@ -19,7 +21,7 @@ const App = () => {
   const dispatch = useDispatch();
 
   let [index, setIndex] = useState(10);
-  
+
 
   const onFocusAboutMe = () => {
     setIndex(index + 1)
@@ -104,10 +106,15 @@ const App = () => {
   },[])
 
   return (
-    
+
     <div className="App">
 
-      <div className="screen" onClick={closeMenu} onTouchStart={closeMenu}></div>
+      <div className="screen" onClick={closeMenu} onTouchStart={closeMenu}>
+        <picture>
+          <source srcSet={bgImgWebp} type='image/webp' />
+          <img className='bg-image' src={bgImg} alt="Background of windows95 pc" />
+        </picture>
+      </div>
 
       <div className='folder-container' onClick={showWelcome}>
         <i className='icon-welcome'></i>
@@ -187,7 +194,7 @@ const App = () => {
           <div className='menu-position' style={{zIndex:`${index + 100}`}}>
             <MenuModal />
           </div>
-       ) 
+       )
       }
 
 
