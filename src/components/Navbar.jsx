@@ -20,7 +20,7 @@ const Navbar = () => {
         dispatch(focusOnDesigns(false));
         dispatch(focusOnAboutMe(true));
     };
-    
+
     const onFocusSkillsHandler = () => {
         dispatch(focusOnSkills(true));
         dispatch(focusOnWelcome(false));
@@ -29,7 +29,7 @@ const Navbar = () => {
         dispatch(focusOnDesigns(false));
         dispatch(focusOnAboutMe(false));
     };
-    
+
     const onFocusDesignsHandler = () => {
         dispatch(focusOnDesigns(true));
         dispatch(focusOnWelcome(false));
@@ -38,7 +38,7 @@ const Navbar = () => {
         dispatch(focusOnAboutMe(false));
         dispatch(focusOnSkills(false));
     };
-    
+
     const onFocusWelcomeHandler = () => {
         dispatch(focusOnWelcome(true));
         dispatch(focusOnText(false));
@@ -47,7 +47,7 @@ const Navbar = () => {
         dispatch(focusOnSkills(false));
         dispatch(focusOnDesigns(false));
     };
-    
+
     const onFocusTextHandler = () => {
         dispatch(focusOnText(true));
         dispatch(focusOnImage(false));
@@ -56,7 +56,7 @@ const Navbar = () => {
         dispatch(focusOnDesigns(false));
         dispatch(focusOnWelcome(false));
     };
-    
+
     const onFocusImageHandler = () => {
         dispatch(focusOnImage(true));
         dispatch(focusOnAboutMe(false));
@@ -80,7 +80,7 @@ const Navbar = () => {
         let interval = setInterval(curTime,500);
         return () => {clearInterval(interval)};
     },[])
-    
+
     return (
             <div className="navbar">
                 <button id="startBtn" className={`start-btn${item.isOpen === true ? " start-click" : ""}`} onClick={onClickHandler}>
@@ -143,13 +143,14 @@ const Navbar = () => {
 
                         )
                     }
-                    
+
                 </div>
 
                 <div className="navbar-icons">
-                <i className="sound-icon" />
-                <i className="internet-icon" />
-                <input className="time-display" type="text" disabled="disabled" id="currentTime" />
+                    <i className="sound-icon" />
+                    <i className="internet-icon" />
+                    <span className="tooltip">You are connected to the internet</span>
+                    <input className="time-display" type="text" disabled="disabled" id="currentTime" />
                 </div>
             </div>
     );

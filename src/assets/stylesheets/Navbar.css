@@ -17,7 +17,7 @@
     width: 20px;
     height: 20px;
 }
-  
+
 .start-btn {
     width: var(--btn-size);
     max-width: 100%;
@@ -39,7 +39,7 @@
     outline-offset: -4px;
     box-shadow: var(--box-shadow-clicked);
 }
-  
+
 .start-btn i.pc-icon {
     background-image: url(../icons/windows-0.png);
 }
@@ -97,7 +97,7 @@
 .element.image i {
     background-image: url(../icons/imagpng-1.png);
 }
-  
+
 .navbar-icons {
     width: 100px;
     height: calc(var(--navbar-size) - .2rem);
@@ -106,16 +106,41 @@
     align-items: center;
     justify-content: space-around;
     box-shadow: var(--box-shadow-inset);
+    position: relative;
 }
-  
+
 .navbar-icons i.sound-icon {
     background-image: url(../icons/loudspeaker_rays-0.png);
 }
-  
+
 .navbar-icons i.internet-icon {
     background-image: url(../icons/conn_pcs_on_on.png);
 }
-  
+
+.tooltip {
+    position: absolute;
+    background-color: #fff;
+    bottom: calc(var(--navbar-size) + 0.7rem);
+    right: 1.4rem;
+    padding: .5rem;
+    display: none;
+}
+
+.tooltip::after {
+    content: "";
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: -.5rem;
+    left: 37px;
+}
+
+i.internet-icon:hover + .tooltip {
+    display: block;
+}
+
 .navbar-icons input.time-display {
     width: 3rem;
     box-sizing: border-box;
@@ -137,6 +162,7 @@
     }
 
     .navbar-icons input:disabled {
+        appearance: none;
         -webkit-appearance: none;
         color: var(--shadow) !important;
     }

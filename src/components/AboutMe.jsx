@@ -20,28 +20,20 @@ const AboutMe = () => {
             <div className="wrapper about-me">
                 <h1>Erika Agrelo</h1>
                 <h2>About me</h2>
-                <p>Creative and detail-oriented Frontend Developer, with a background in Multimedia Design. With a keen sense of aesthetic and UI Design, and a passion for developing responsive website design. Skilled in HTLM, CSS, SASS, JavaScript and React, as well as Adobe Creative Cloud Suite.</p>
+                <p>Creative and detail-oriented Frontend Developer, with a background in Multimedia Design. With a keen sense of aesthetics and UI design, and pas- sion for developing responsive websites. Highly skilled in HTML, CSS, JavaScript and React, as well as Adobe Creative Cloud Suite. Proactive, team player, always looking for ways of improvement.</p>
 
-                <h2>Projects</h2>
-                <h3>Front-End Developer - Shake Again - 2021/2022</h3>
-                <p>HTML5, CSS, SASS, LESS, PHP, WordPress, Webflow, Figma</p>
-                <p>Currently designing, developing and deploying e-Commerce sites.</p>
+                <h2>Experience</h2>
+                <h3>Front-End Developer - Shake Again - 2021/2023</h3>
+                <p>HTML5, CSS, SASS, LESS, PHP, WordPress, Webflow, Figma, React, GSAP</p>
+                <p>Websites designer and developer. Working on identifying opportunities for aesthetic improve- ments and usability for our clients. Research and implementation of new tools and functionalities to meet and improve our customer expectations and experience. Prototyping, graphic design, creative process and identity management. Reporting to the CTO.</p>
 
-                <h3>El club del Plan - CeiboDigital - 2021</h3>
-                <p>React Native, Redux, MongoDB, JWT</p>
-                <p>Developed an event mobile app, that allows users to register, sign in and create and share free and paid events, along with browsing sponsored events by category, dates, price, and location. Additionally, users can add them to favourites as well as rate and comment events.    </p>
+                <h3>Multimedia Designer - Freelance - 2018/2021</h3>
+                <p>Photoshop, Illustrator, After Effects, Cinema 4D</p>
+                <p>Designed animated videos for clients. 3D rende- rings of products. Identity and brand design. Social media identity and branding design. Clo- thing printing design.</p>
 
-                <h3>E-Commerce - Deluxo - 2021</h3>
-                <p>React, Redux, Express, PostgreSQL, JWT</p>
-                <p>Collaborated in the creation of a Fashion e-Commerce in which users can register, sign in, add products to the cart, together with searching clothing by category and name. Additionally, users are able to comment and rate products.</p>
-
-                <h3>OMDB - RESTful API - 2021</h3>
-                <p>React, Redux, Express, PostgreSQL, JWT</p>
-                <p>Built a web application for users to register, sign in and search for movies fetched from the Omdb API, in addition to rating and adding them to favourites.</p>
-
-                <h3>Akire Stylo - 2020</h3>
+                <h3><a href="https://www.instagram.com/akirestylo" target="_blank" rel="noreferrer">Akire Stylo</a> - 2020</h3>
                 <p>WordPress, WooCommerce</p>
-                <p>Conceptualized and created an e-Commerce deployed with WordPress and WooCommerce for my own brand of T-Shirts featuring my original digital illustations, stamped with Direct-to-Garment printing, as well as designing a visual identity system and social media content.</p>
+                <p>Conceptualized and created an e-Commerce deployed with WordPress and WooCommerce for my own brand of T-Shirts featuring my original digital illustations, as well as designing a visual identity system and social media content.</p>
 
                 <h2>Education</h2>
                 <h3>Coding BootCamp - Plataforma5</h3>

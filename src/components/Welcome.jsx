@@ -17,7 +17,8 @@ const Welcome = () => {
         </div>
         <div className="content welcome">
             <div className="wrapper welcome">
-                <p>This is my windows95 Desktop</p>
+                <p>Hello! My name is Erika Agrelo, and this is my Windows 95 Desktop.</p>
+                <p>You are welcome to look around &#128513;</p>
                 <p>-Agreloe</p>
             </div>
         </div>

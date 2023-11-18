@@ -34,6 +34,10 @@
     margin: 0 .5rem 0 .25rem;
 }
 
+.item span {
+    cursor: default;
+}
+
 .item.mail {
     padding: 0 !important;
 }
