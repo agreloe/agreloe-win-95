@@ -33,7 +33,7 @@ const Designs = () => {
         <div className="top-bar">
             <i className='designs-icon-small'></i>
             <span>Designs</span>
-            <button className='close-designs' onClick={closeDesigns}><div></div></button>
+            <button className='close-designs' onClick={closeDesigns}><span></span><span className="sr-only">Close</span></button>
         </div>
         <div className="content designs">
           <div className="wrapper designs">

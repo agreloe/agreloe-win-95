@@ -150,7 +150,7 @@ const Navbar = () => {
                     <i className="sound-icon" />
                     <i className="internet-icon" />
                     <span className="tooltip">You are connected to the internet</span>
-                    <input className="time-display" type="text" disabled="disabled" id="currentTime" />
+                    <input className="time-display" type="text" disabled="disabled" aria-disabled="true" id="currentTime" />
                 </div>
             </div>
     );

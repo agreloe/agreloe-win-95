@@ -14,7 +14,7 @@ const AboutMe = () => {
         <div className="top-bar">
             <i className="about-me-icon" />
             <span>About me</span>
-            <button className="close-about-me" onClick={closeWindow}><div></div></button>
+            <button className="close-about-me" onClick={closeWindow}><span></span><span className="sr-only">Close</span></button>
         </div>
         <div className="content about-me">
             <div className="wrapper about-me">

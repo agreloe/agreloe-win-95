@@ -15,12 +15,12 @@ const Image = () => {
         <i className="image-icon" />
         <span>skate_jump.gif</span>
         <button className="close-image" onClick={closeImage}>
-          <div></div>
+        <span></span><span className="sr-only">Close</span>
         </button>
       </div>
 
       <div className="content image">
-        <img src={video} alt="gif" />
+        <img src={video} alt="gif" title="skate_jump.gif" />
       </div>
     </div>
   );

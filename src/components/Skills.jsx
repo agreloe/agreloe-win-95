@@ -14,7 +14,7 @@ const Skills = () => {
       <div className="top-bar">
         <i className='console-icon' />
         <span>Skills</span>
-        <button className='close-skills' onClick={closeSkills}><div></div></button>
+        <button className='close-skills' onClick={closeSkills}><span></span><span className="sr-only">Close</span></button>
       </div>
       <div className="content skills">
         <div className="wrapper skills">
@@ -46,11 +46,11 @@ const Skills = () => {
           <div className="file-container">
             <i className='express'></i><span>Express</span>
           </div>
-          
+
           <div className="file-container">
             <i className='postgresql'></i><span>PostgreSQL</span>
           </div>
-          
+
           <div className="file-container">
             <i className='mongodb'></i><span>MongoDB</span>
           </div>

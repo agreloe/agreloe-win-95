@@ -119,12 +119,13 @@
   background-color: var(--interface-color);
 }
 
-.top-bar button div {
+.top-bar button span {
   width: 10px;
   height: 10px;
   background-color: var(--shadow);
   margin: 0 auto;
   clip-path: var(--close-icon);
+  display: block;
 }
 
 .content {
@@ -156,6 +157,18 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
 

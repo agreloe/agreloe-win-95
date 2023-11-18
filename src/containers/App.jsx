@@ -105,7 +105,7 @@ const App = () => {
       <div className="screen" onClick={closeMenu} onTouchStart={closeMenu}>
         <picture>
           <source srcSet={bgImgWebp} type='image/webp' />
-          <img className='bg-image' src={bgImg} alt="Background of windows95 pc" />
+          <img className='bg-image' src={bgImg} alt="Background of Windows95 PC" />
         </picture>
       </div>
 
