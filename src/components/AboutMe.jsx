@@ -19,17 +19,17 @@ const AboutMe = () => {
         <div className="content about-me">
             <div className="wrapper about-me">
                 <h1>Erika Agrelo</h1>
-                <h2>About me</h2>
-                <p>Creative and detail-oriented Frontend Developer, with a background in Multimedia Design. With a keen sense of aesthetics and UI design, and pas- sion for developing responsive websites. Highly skilled in HTML, CSS, JavaScript and React, as well as Adobe Creative Cloud Suite. Proactive, team player, always looking for ways of improvement.</p>
+                <h2>Summary</h2>
+                <p>Creative and detail-oriented Frontend Developer, with a background in Multimedia Design. With a keen sense of aesthetics and UI design, and passion for developing responsive websites. Highly skilled in HTML, CSS, JavaScript and React, as well as Adobe Creative Cloud Suite. Proactive, team player, always looking for ways of improvement.</p>
 
                 <h2>Experience</h2>
                 <h3>Front-End Developer - Shake Again - 2021/2023</h3>
                 <p>HTML5, CSS, SASS, LESS, PHP, WordPress, Webflow, Figma, React, GSAP</p>
-                <p>Websites designer and developer. Working on identifying opportunities for aesthetic improve- ments and usability for our clients. Research and implementation of new tools and functionalities to meet and improve our customer expectations and experience. Prototyping, graphic design, creative process and identity management. Reporting to the CTO.</p>
+                <p>Websites designer and developer. Working on identifying opportunities for aesthetic improvements and usability for our clients. Research and implementation of new tools and functionalities to meet and improve our customer expectations and experience. Prototyping, graphic design, creative process and identity management. Reporting to the CTO.</p>
 
                 <h3>Multimedia Designer - Freelance - 2018/2021</h3>
                 <p>Photoshop, Illustrator, After Effects, Cinema 4D</p>
-                <p>Designed animated videos for clients. 3D rende- rings of products. Identity and brand design. Social media identity and branding design. Clo- thing printing design.</p>
+                <p>Designed animated videos for clients. 3D renderings of products. Identity and brand design. Social media identity and branding design. Clo- thing printing design.</p>
 
                 <h3><a href="https://www.instagram.com/akirestylo" target="_blank" rel="noreferrer">Akire Stylo</a> - 2020</h3>
                 <p>WordPress, WooCommerce</p>
